@@ -1,6 +1,10 @@
-# Project Overview
+# Fraud Detection & Analytics System
 
-Welcome to this project! This repository contains database schemas, migrations, and seed data for the application.
+This project demonstrates SQL deployment for fintech use cases.
+
+## Overview
+
+This repository contains a comprehensive SQL-based framework for building fraud detection and analytics systems in fintech applications. It includes database schemas, migration scripts, and seed data to support financial transaction monitoring and analysis.
 
 ## Project Structure
 
@@ -8,34 +12,56 @@ Welcome to this project! This repository contains database schemas, migrations, 
 The SQL directory is organized to manage database operations efficiently:
 
 - **`/sql/schema/`** - Contains table creation scripts
-  - Use these scripts to set up the initial database structure
+  - Core database tables for customers, transactions, and fraud detection
   - Includes all table definitions, indexes, and constraints
+  - Start with `customers.sql` to create the Customers table
 
 - **`/sql/migrations/`** - Contains schema update scripts
   - Manage database schema changes and evolution over time
   - Apply updates in sequential order to maintain consistency
+  - Use for adding new features and improving data structures
 
 - **`/sql/seeds/`** - Contains mock data insert scripts
-  - Use these scripts to populate the database with test data
-  - Useful for development and testing environments
+  - Populate the database with test data for development and testing
+  - Useful for simulating transaction patterns and fraud scenarios
 
 ## Getting Started
 
-1. Start with the schema creation scripts in `/sql/schema/`
-2. Apply any necessary migrations from `/sql/migrations/`
-3. Populate test data using the seed scripts in `/sql/seeds/`
+1. **Create the Schema**
+   - Start with the schema creation scripts in `/sql/schema/`
+   - Execute `customers.sql` first to establish the base table structure
+
+2. **Apply Migrations**
+   - Apply any necessary migrations from `/sql/migrations/`
+   - Follow migration files in order to maintain data consistency
+
+3. **Seed Test Data**
+   - Populate test data using the seed scripts in `/sql/seeds/`
+   - Use realistic transaction patterns for testing fraud detection algorithms
+
+## Use Cases
+
+- **Customer Management** - Track customer information and KYC (Know Your Customer) status
+- **Transaction Analysis** - Store and analyze financial transactions
+- **Fraud Detection** - Identify suspicious patterns and potential fraud
+- **Analytics** - Generate insights from transaction data and customer behavior
 
 ## Database Management
 
-All SQL scripts should follow your database's naming conventions and best practices. Ensure scripts are idempotent where appropriate to prevent errors on re-execution.
+All SQL scripts follow best practices for fintech systems:
+- Ensure scripts are idempotent where appropriate to prevent errors on re-execution
+- Use proper indexing for query performance
+- Maintain data integrity with appropriate constraints
 
 ## Contributing
 
 When adding new database changes:
-- Create new migration files in `/sql/migrations/`
-- Use descriptive file names with timestamps or version numbers
-- Document the purpose of each migration
+- Create new schema files in `/sql/schema/` for new tables
+- Create new migration files in `/sql/migrations/` with descriptive names
+- Include timestamp or version numbers in file names
+- Document the purpose of each schema change
 
 ---
 
 **Repository:** 382002/382002
+**Purpose:** SQL deployment for fintech fraud detection systems
